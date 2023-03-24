@@ -26,7 +26,6 @@
             font-size: 40px;
         }
         i:hover {
-            border-radius: 50%;
             color: rgb(124, 186, 30);
             cursor: pointer;
         }
@@ -40,6 +39,9 @@
 
               .sent {
                 @apply flex flex-col bg-green-800 rounded-lg w-fit p-2 text-sm max-w-xl ml-auto;
+              }
+              .highlight {
+                @apply hover:text-lime-600 hover:cursor-pointer
               }
             }
     </style>
@@ -74,9 +76,9 @@
                     <button type="submit" class="mr-2"><i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i></button>
                 </div>
             </header>
-            <div class="my-2">
+            <div class="my-2 highlight">
                 <i class="fa-solid fa-box-archive"></i>
-                <span class="cursor-pointer">archived</span> <!--idk-->
+                <span >archived</span> <!--idk-->
             </div>
             <!-- contatti -->
             <div class="flex flex-col">
@@ -109,7 +111,7 @@
                 <div class="flex w-full">
                     <i class="fa-regular fa-circle-user self-center"></i>
                     <div class="ml-2">
-                        <span>Nome gruppo in chat</span>
+                        <span class="highlight">Nome gruppo in chat</span>
                         <br>
                         <ul class="flex">
                             <li>+39 xxx xxx xxxx,</li>
