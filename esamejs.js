@@ -58,6 +58,8 @@ console.log(spese(x));
 
 
 function pazza(string) {
+    let pazza='questa stringa è pazza'
+    let nonPazza='questa stringa non è pazza'
     function lastThree(string, cntrl) {
         let z = string.length
         for (let i = 0; i < cntrl.length; i++) {
@@ -70,18 +72,47 @@ function pazza(string) {
     }
     const start = new Set([',', '.', '!', '?', ':', ';', '-', '~'])
     if (string.includes('Church') || string.includes('mare')) {
-        return 'non pazza'
+        return nonPazza
     }
-    else if (string.includes('Cthulu') || start.has(string[0])) return 'pazza'
-    else if (!string.includes('lui') || !string.includes('lei') || !string.includes('egli') || !string.includes('ella')) return 'pazza'
+    else if (string.includes('Cthulu') || start.has(string[0])) return pazza
+    else if (!string.includes('lui') || !string.includes('lei') || !string.includes('egli') || !string.includes('ella')) return pazza
     let array = string.split(' ')
     if (lastThree(array[0], ['are', 'ere', 'ire']) && lastThree(array[array.length - 1], ['are', 'ere', 'ire'])) {
-        return 'pazza'
+        return pazza
     }
-    else if (lastThree(array[array.length - 1], ['?!?'])) return 'pazza'
+    else if (lastThree(array[array.length - 1], ['?!?'])) return pazza
+
+}
+
+console.log(pazza('morire volare Church'));
+
+const indexMatrix = [
+    [1000, 'M'],
+    [900, 'CM'],
+    [500, 'D'],
+    [400, 'CD'],
+    [100, 'C'],
+    [90, 'XC'],
+    [50, 'L'],
+    [40, 'XL'],
+    [10, 'X'],
+    [9, 'IX'],
+    [5, 'V'],
+    [4, 'IV'],
+    [1, 'I']
+];
+function SPQR(x) {
+    let result = ''
+    for (let i = 0; i < indexMatrix.length; i++) {
+        while (x >= indexMatrix[i][0]) {
+            result += indexMatrix[i][1]
+            x -= indexMatrix[i][0]
+        }
+
+    }
+    return result
 
 }
 
 
-
-
+console.log(SPQR(1943));

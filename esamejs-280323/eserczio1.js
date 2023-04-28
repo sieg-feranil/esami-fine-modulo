@@ -1,3 +1,9 @@
+// pseudo code
+// formattare la stringa in entrata per poterla trasformare in array di oggetti
+// pushare l'arrey di oggetti xcon gli elementi formattati e calolare la totale delle spese salvando max e min
+// iterare sull'array di oggetti e pushare solo gli oggetti con la spesa massima e la spesa minima 
+
+
 let x =
     `
 Cancelleria
