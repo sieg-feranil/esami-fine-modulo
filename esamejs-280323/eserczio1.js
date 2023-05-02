@@ -18,6 +18,14 @@ Servizzi igenici
 
 Vendite
 0
+
+Servizzi random
+1000
+1
+200
+
+servizzi rndm
+0
 `
 
 function spese(string) {
@@ -62,7 +70,13 @@ function spese(string) {
         if (el.spese == max || el.spese == min) {
             matrix.push(el)
         }
+        if (matrix.length>2) {
+            while (matrix.length!=2) {
+                matrix.shift()
+            }
+        }
     });
+
     return matrix
 }
 console.log(spese(x));

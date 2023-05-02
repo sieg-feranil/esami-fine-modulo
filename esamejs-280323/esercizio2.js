@@ -8,7 +8,6 @@ function pazza(string) {
                 return true
             }
 
-            else return false
         }
     }
     const start = new Set([',', '.', '!', '?', ':', ';', '-', '~'])
@@ -26,3 +25,4 @@ function pazza(string) {
 }
 
 console.log(pazza('morire volare Church'));
+
