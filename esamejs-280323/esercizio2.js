@@ -26,3 +26,31 @@ function pazza(string) {
 
 console.log(pazza('morire volare Church'));
 
+// soluzione alberto
+// function isMad(sentence) {
+//     const subjects = ["Lui", "Lei", "Egli", "Ella"]
+//     const verbs = ["are", "ere", "ire"]
+//     const punct = [',', '.', '!', '?', ':', ';', '-', '~']
+  
+//     const extras = ['Church', 'mare']
+  
+//     let isSubjectPresent = subjects.some(subj => sentence.includes(subj))
+//     let endsHarshly = sentence.endsWith('?!?')
+//     let aboutCthulhu = sentence.includes('Cthulhu')
+  
+//     let startsWithVerbs = verbs
+//         .some(verb => sentence.split(' ')[0].endsWith(verb))
+//     let endsWithVerbs = verbs.some(verb => sentence.endsWith(verb))
+//     let startsOrEnds = startsWithVerbs && endsWithVerbs
+  
+//     let startsWithPunct = punct.some(p => sentence.startsWith(p))
+  
+//     let isNeverMad = extras.some(e => sentence.includes(e))
+  
+//     return !isNeverMad && (
+//       !isSubjectPresent ||
+//       endsHarshly ||
+//       aboutCthulhu ||
+//       startsOrEnds ||
+//       startsWithPunct)
+//   }
